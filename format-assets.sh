@@ -3,7 +3,7 @@
 # not pretty, but does the job
 function format_mxlibrary() {
     fn=$1; shift
-    grep -q '<mxlibrary>' "$fn" || return 1
+    grep -q '<mxlibrary>' "$fn" || return 0
 
     tmp="${fn}.tmp"
     echo '<mxlibrary>' > "$tmp"
